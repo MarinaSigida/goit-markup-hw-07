@@ -28,30 +28,26 @@
           <a class="header-logo" href="./index.html"
             ><span class="header-logo-iris">Web</span>Studio</a
           >
-
-          <button 
-          class="menu-button is-open" 
-          type="button" 
-          data-menu-button
-          aria-expended="false">
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
             <svg
-              class="svg-menu"
-              width="32"
-              height="22"
-              aria-label="Mobile menu switcher"
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <use
-                class="icon-cross"
-                href="./images/icons.svg#icon-close-cross"
-              ></use>
-              <use
-                class="icon-menu"
-                href="./images/icons.svg#icon-menu-hamburger"
-              ></use>
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
             </svg>
           </button>
-
-          <!-- <ul class="menu">
+          <ul class="menu">
             <li>
               <a class="menu-list-text current" href="./index.html">Studio</a>
             </li>
@@ -59,9 +55,9 @@
               <a class="menu-list-text" href="./portfolio.html">Portfolio</a>
             </li>
             <li><a class="menu-list-text" href="#">Contacts</a></li>
-          </ul> -->
+          </ul>
         </nav>
-        <!-- <ul class="address">
+        <ul class="address">
           <li>
             <a class="address-link-text" href="mailto:info@devstudio.com"
               >info@devstudio.com</a
@@ -72,12 +68,76 @@
               >+11 (000) 111-11-11</a
             >
           </li>
-        </ul> -->
+        </ul>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <button class="button-close mobile-btn-close js-close-menu">
+            <svg class="icon-close">
+              <use href="./images/icons.svg#icon-close-cross"></use>
+            </svg>
+          </button>
+
+          <ul class="mobile-menu">
+            <li class="mobile-item">
+              <a href="./index.html" class="mobile-link mob-current">Studio</a>
+            </li>
+            <li class="mobile-item">
+              <a href="./portfolio.html" class="mobile-link">Portfolio</a>
+            </li>
+            <li class="mobile-item">
+              <a href="#" class="mobile-link">Contacts</a>
+            </li>
+          </ul>
+          <ul class="mobile-address">
+            <li>
+              <a class="address-link-text" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a class="address-link-text" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-social webstudio-media-list">
+            <li>
+              <a href="#" class="webstudio-media">
+                <svg class="webstudio-media-icon">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="webstudio-media">
+                <svg class="webstudio-media-icon">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="webstudio-media">
+                <svg class="webstudio-media-icon">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="webstudio-media">
+                <svg class="webstudio-media-icon">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
     <main>
-      <!-- <section class="main-section">
+      <section class="main-section">
         <div class="container">
           <h1 class="main-section-title">
             Effective Solutions for Your Business
@@ -86,7 +146,7 @@
             Order Service
           </button>
         </div>
-      </section> -->
+      </section>
 
       <section class="section">
         <div class="container">
@@ -146,7 +206,7 @@
           </ul>
         </div>
       </section>
-      <!-- 
+
       <section class="services">
         <div class="container">
           <h2 class="services-title">What are we doing</h2>
@@ -162,8 +222,8 @@
             </li>
           </ul>
         </div>
-      </section> -->
-      <!-- 
+      </section>
+
       <section class="employees section">
         <div class="container">
           <h2 class="employees-title">Our Team</h2>
@@ -262,6 +322,11 @@
 
             <li class="employees-items">
               <img src="./images/employee3.jpg" alt="Marketing" width="264" />
+              <!-- <img
+                srcset="elva-fairy-480w.jpg 1x, elva-fairy-640w.jpg 2x"
+                src="elva-fairy-640w.jpg"
+                alt="Elva dressed as a fairy"
+              /> -->
               <div class="employees-description">
                 <h3 class="employees-name">Camila Garcia</h3>
                 <p class="employees-text">Marketing</p>
@@ -343,9 +408,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
-      <!-- <section class="section">
+      <section class="section">
         <div class="container">
           <h2 class="customers-title">Customers</h2>
           <ul class="customers-list">
@@ -398,10 +463,10 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
 
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container container-footer">
         <div class="footer-footer">
           <a class="footer-logo" href="./index.html"
@@ -465,7 +530,7 @@
           </div>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <div data-modal class="backdrop is-hidden">
       <div class="modal">
@@ -550,6 +615,12 @@
       </div>
     </div>
 
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/modal.js"></script>
     <script defer src="js/mobile-menu.js"></script>
   </body>
