@@ -118,7 +118,7 @@ a {
   padding: 0;
 } */
 
-/* ---------------------------- TABLET ------------------------------- */
+/* ---------------------------- MOBILE------------------------------- */
 
 @media screen and (max-width: 767px) {
   /* Block Header  (repeats)*/
@@ -158,7 +158,7 @@ a {
 
   /* ------------------- Mob. menu ---------------------------- */
   .mobile-item:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 40px;
   }
   .mobile-link {
     font-weight: 700;
@@ -172,20 +172,59 @@ a {
   .mob-current {
     color: #3f51b5;
   }
+
   .mobile-address {
     margin-top: auto;
   }
+
+  .mobile-address-phone {
+    display: block;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1111;
+    text-decoration: none;
+    color: var(--color_iris);
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
   .mobile-social {
     margin-top: 48px;
-    background-color: gray;
     display: flex;
     gap: 35px;
   }
+
+.mobile-address-mail {
+  font-weight: 500;
+font-size: 20px;
+line-height: 1.2;
+letter-spacing: 0.02em;
+color:  var(--color_slate);
+}
+
   @media screen and (min-width: 428px) {
-    .mobile-social {
+    .mobile-social.webstudio-media-list {
       gap: 56px;
     }
   }
+
+  .mobile-webstudio-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 8px;
+    background-color: var(--color_iris);
+    border-radius: 50%;
+
+  }
+
+  .mobile-webstudio-media-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+
   .menu .link {
     padding: 10px;
     color: inherit;
@@ -211,6 +250,12 @@ a {
     border: none;
     border-radius: 50%;
     outline: none;
+  }
+
+  .menu-hamburger {
+    stroke: var(--color_navy-blue);
+    width: 32px;
+    height: 22px;
   }
 
   .menu-toggle:hover,
@@ -289,6 +334,7 @@ a {
     margin-left: auto; /* Прижимаем  к правому краю страницы*/
     list-style: none;
   }
+
   .address-link-text {
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -331,7 +377,7 @@ a {
         rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0.7)
       ),
-      url(../images/people-office.jpg); /* Поменять картинку 🙂 */
+      url(../images/Dark-bg-mobile-1x.jpg); /* Картинка 1х  🙂*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -346,7 +392,7 @@ a {
           rgba(0, 0, 0, 0.7),
           rgba(0, 0, 0, 0.7)
         ),
-        url(../images/people-office.jpg); /* Поменять картинку 🙂 */
+        url(../images/Dark-bg-mobile-2x.jpg); /* Картинка 2х 🙂 */
     }
   }
 
@@ -546,11 +592,27 @@ a {
 
   /* Page - Portfolio */
   /* Page - Portfolio - Buttons */
-  .filter {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 72px;
+
+  @media (max-width: 767px) {
+
+    .filter {
+      display: flex;
+      margin-bottom: 72px;
+      flex-wrap: wrap;
+      justify-content: left;
+    }
+
+    .buttons {
+      margin-bottom: 16px;
+    }
+
+    .buttons:nth-child(n+4){
+      margin-bottom: 0; /*Обнуляем правый марджин у правой крайней кнопки*/
+    }
   }
+
+  
+
   .filter-button {
     background-color: var(--color_cloud);
     border: 1px solid var(--color_cornflower);
@@ -577,6 +639,7 @@ a {
   .buttons {
     margin-right: 24px;
   }
+
   .buttons:last-child {
     margin-right: 0; /*Обнуляем правый марджин у правой крайней кнопки*/
   }
@@ -594,37 +657,46 @@ a {
   /* Page - Portfolio */
   /* Page - Portfolio - Photos */
 
-  .portfolio {
-    padding-top: 96px;
-    padding-bottom: 120px;
-  }
+  /*Применяем стили как для мобильного*/
 
-  .container-portfolio {
-    width: 1158px; /*Ширина  контента 1128px + по 15рх с  каждой  стороны glutter/2 */
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+    .portfolio {
+      padding-top: 48px;
+      padding-bottom:48px;
+      margin: 0;
+    }
+
+    .portfolio-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .portfolio-item {
+      max-width: 396px;
+      margin-bottom: 48px;
+    }
+
+    /* .portfolio-item:nth-child(3n) {
+      margin-right: 0; 
+    }
+
+    .portfolio-item:nth-last-child(-n + 3) {
+      margin-bottom: 0; 
+    } */
+
+
+
+
+
 
   .portfolio-list {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .portfolio-item {
-    width: 360px;
-    margin-right: 24px;
-    margin-bottom: 48px;
-  }
+  
 
-  .portfolio-item:nth-child(3n) {
-    margin-right: 0; /*Обнуляем правую границу у крайнего правого элемента*/
-  }
-
-  .portfolio-item:nth-last-child(-n + 3) {
-    margin-bottom: 0; /*Обнуляем нижние границы у последних 3-х элементов*/
-  }
+  
 
   .portfolio-link {
     text-decoration: none;
@@ -719,9 +791,6 @@ a {
     padding: 100px 0;
   }
 
-  /* .container-footer {
-    display: flex;
-  } */
 
   .footer-footer {
     margin-bottom: 72px;
@@ -1251,7 +1320,7 @@ a {
         rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0.7)
       ),
-      url(../images/people-office.jpg); /* Поменять картинку 🙂 */
+      url(../images/Dark-bg-tablet-1x.jpg); /*  Картинка 1х 🙂 */
   }
 
   @media screen and (min-device-pixel-ratio: 2),
@@ -1263,7 +1332,7 @@ a {
           rgba(0, 0, 0, 0.7),
           rgba(0, 0, 0, 0.7)
         ),
-        url(../images/people-office.jpg); /* Поменять картинку 🙂 */
+        url(../images/Dark-bg-tablet-2x.jpg); /* Картинка 2х 🙂 */
     }
   }
   .main-section-title {
@@ -1535,35 +1604,31 @@ a {
   /* Page - Portfolio - Photos */
 
   .portfolio {
-    padding-top: 96px;
-    padding-bottom: 120px;
+    padding-top: 64px;
+    padding-bottom: 96px;
   }
 
-  .container-portfolio {
-    width: 1158px; /*Ширина  контента 1128px + по 15рх с  каждой  стороны glutter/2 */
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  
 
   .portfolio-list {
     display: flex;
     flex-wrap: wrap;
+
   }
 
   .portfolio-item {
-    width: 360px;
+    width: 356px;
     margin-right: 24px;
-    margin-bottom: 48px;
+    margin-bottom: 72px;
   }
 
-  .portfolio-item:nth-child(3n) {
-    margin-right: 0; /*Обнуляем правую границу у крайнего правого элемента*/
-  }
+  
+  /* .portfolio-item:nth-child(2n) {
+    margin-right: 0; 
+  } */
 
-  .portfolio-item:nth-last-child(-n + 3) {
-    margin-bottom: 0; /*Обнуляем нижние границы у последних 3-х элементов*/
+  .portfolio-item:last-child {
+    margin-bottom: 0; /*Обнуляем нижние границы у последнего элемента*/
   }
 
   .portfolio-link {
@@ -2055,6 +2120,10 @@ a {
     gap: 72px 24px;
     max-width: 530px;
   }
+  
+  .portfolio-item:nth-child(2n) {
+    margin-right: 0; 
+  }
 }
 
 /* --------------------- DESKTOP ------------------------------- */
@@ -2077,7 +2146,7 @@ a {
         rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0.7)
       ),
-      url(../images/people-office.jpg);
+      url(../images/Dark-bg-desktop-1x.jpg); /* Картинка 1х🙂 */
   }
 
   @media screen and (min-device-pixel-ratio: 2),
@@ -2089,7 +2158,7 @@ a {
           rgba(0, 0, 0, 0.7),
           rgba(0, 0, 0, 0.7)
         ),
-        url(../images/people-office.jpg); /* Поменять картинку 🙂 */
+        url(../images/Dark-bg-desktop-2x.jpg); /* Картинка. 2х 🙂 */
     }
   }
   /* -------- GOALS ----------- */
@@ -2128,4 +2197,24 @@ a {
   .subscribe-container {
     margin-left: auto;
   }
+
+  .portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+  }
+
+  .portfolio-item {
+    width: 360px;
+    margin-right: 24px;
+    margin-bottom: 48px;
+  }
+
+  .portfolio-item:nth-child(3n) {
+    margin-right: 0; /*Обнуляем правую границу у крайнего правого элемента*/
+  }
+
+  .portfolio-item:nth-last-child(-n + 3) {
+    margin-bottom: 0; /*Обнуляем нижние границы у последних 3-х элементов*/
+  }
+
 }
